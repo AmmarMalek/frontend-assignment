@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+</head>
+<body>
+
+<center>    
+    <h1>Currency converter</h1>
+    Enter Indian Rupees: <input type="text" id="rupees">
+    Country: <select id="country" onchange="currencyConverter()">
+        <option selected disabled>--- Countries ---</option>
+        <option value="0.012">US</option>
+        <option value="0.046">Saudi Arabia</option>
+        <option value="0.045">Dubai</option>
+        <option value="0.018">Australia</option>
+        <option value="0.020">New Zealand</option>
+    </select>
+    <br>
+    <h2 id="result"></h2>
+</center>
+
+
+<script>
+    function currencyConverter(){
+        var rup = document.getElementById("rupees");
+        var coun = document.getElementById("country");
+        var res = document.getElementById("result");
+
+        var converter = rup.value * coun.value;
+        res.innerHTML = converter; 
+    }
+</script>
+</body>
+</html>

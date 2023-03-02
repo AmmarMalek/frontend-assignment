@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key event</title>
+</head>
+<body>
+
+    <input type="text" name="" id="someText" onkeyup="test()"> <br><br>
+    <textarea id="getText"></textarea>
+    
+<script>
+    function test()
+	{
+		var inp_tag = document.getElementById('someText');
+		var txt_tag = document.getElementById('getText');
+
+		txt_tag .innerHTML = inp_tag.value
+	}
+</script>
+</body>
+</html>

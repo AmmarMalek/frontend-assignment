@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event</title>
+</head>
+<body>
+    
+<h1 id="m_event" onmouseenter="changeText()" onmouseleave="changeText1()">Ammar</h1>
+
+<script>
+    function changeText(){
+        var h1_tag = document.getElementById('m_event');
+        h1_tag.innerHTML = "Malek"
+    }
+    function changeText1()
+		{
+			var h1_tag  = document.getElementById('m_event');
+
+			h1_tag.innerHTML ="Ammar"
+		}
+</script>
+</body>
+</html>

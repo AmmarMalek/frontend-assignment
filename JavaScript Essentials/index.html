@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td,th{
+        padding: 20px;
+    }
+    input{
+        width: 50px;
+    }
+</style>
+<body>
+    
+
+<center>
+    <table border="1" style="text-align: center;">
+        <tr>
+            <th>Product Info</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td><img src="toy.jpg" alt="" width="50px">Toy-1</td>
+            <td>
+                <input type="number" value="1" id="qty1">
+            </td>
+            <td><input type="number" id="price1" value="150"></td>
+            <td>
+                <button>Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="toy2.jpg" alt="" width="50px">Toy-2</td>
+            <td>
+                <input type="number" value="1">
+            </td>
+            <td><input type="number" value="200" id="price2"></td>
+            <td>
+                <button>Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="" id="total"></td>
+            <td><button onclick="totalPrice()">total</button></td>
+        </tr>
+    </table>
+</center>
+
+
+<script>
+
+    price1 = document.querySelector('#price1').value;
+    price2 = document.querySelector('#price2').value;
+
+    function totalPrice(){
+        totalpri = parseInt(price1)+parseInt(price2)
+        document.querySelector('#total').value = totalpri; 
+    }
+</script>
+</body>
+</html>
