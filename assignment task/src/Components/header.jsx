@@ -6,10 +6,12 @@ import {
   Link,
 } from "react-router-dom";
 import Registration from './registration'
-import Login from './login'
+import Login from './login';
+import ListView from './listview';
+import IncDec from './inc-dec';
 
 function header(props) {
-    const Menu = {'/registration':'Registration','/login':'Login'}
+    const Menu = {'/registration':'Registration','/login':'Login','/listview':'ListView','/incdec':'Incr-Decr'}
     const returnData = Object.entries(Menu).map((res,i)=>{
         return <li className="nav-item" key={i}>
           <Link className="nav-link active" aria-current="page" to={res[0]}>{res[1]}</Link>
@@ -36,6 +38,8 @@ function header(props) {
 <Routes>
     <Route path='/registration' element={<Registration />}/>
     <Route path='/login' element={<Login />}/>
+    <Route path='/listview' element={<ListView />}/>
+    <Route path='/incdec' element={<IncDec />}/>
 </Routes>
 </Router> 
         </>
